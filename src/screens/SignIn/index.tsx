@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
   Image,
-  StatusBar,
   Text, 
   TextInput, 
   View 
@@ -14,12 +13,6 @@ import { styles } from './styles';
 export  function SignIn() {
   return(
     <View style={styles.container}>
-      <StatusBar 
-        backgroundColor="transparent"
-        barStyle={'light-content'}
-        translucent
-      />
-
       <Image 
         resizeMode="stretch"
         source={IllustrationImg} 
