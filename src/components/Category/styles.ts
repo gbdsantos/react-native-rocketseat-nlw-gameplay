@@ -14,36 +14,39 @@ export const styles = StyleSheet.create({
 
   content: {
     alignItems: 'center',
-    backgroundColor: theme.colors.secondary40,
     borderRadius: 8,
     justifyContent: 'space-between',
     height: 100,
-    paddingVertical: 7,
+    paddingVertical: 20,
     width: 100,
   },
 
   title: {
     color: theme.colors.heading,
-    fontFamily: theme.fonts.title500,
+    fontFamily: theme.fonts.title700,
     fontSize: 15,
   },
 
   check: {
-    alignSelf: 'flex-end',
+    position: 'absolute',
+    top: 7,
+    right: 7,
+
     backgroundColor: theme.colors.secondary100,
     borderColor: theme.colors.secondary50,
     borderRadius: 3,
     borderWidth: 2,
-    marginRight: 7,
     height: 12,
     width: 12
   },
 
   checked: {
-    alignSelf: 'flex-end',
+    position: 'absolute',
+    top: 7,
+    right: 7,
+    
     backgroundColor: theme.colors.primary,
     borderRadius: 3,
-    marginRight: 7,
     height: 10,
     width: 10
   },
