@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FlatList, Text, View } from 'react-native';
 
 import { Appointment } from '../../components/Appointment';
+import { Background } from '../../components/Background';
 import { ButtonAdd } from '../../components/ButtonAdd';
 import { CategorySelect } from '../../components/CategorySelect';
 import { ListDivider } from '../../components/ListDivider';
@@ -32,7 +33,7 @@ export function Home() {
         id: '1',
         name: 'Lendários',
         icon: null,
-        owner: true
+        owner: false
       },
       category: '1',
       date: '22/06 às 20:40h',
@@ -45,7 +46,7 @@ export function Home() {
   }
 
   return(
-    <View>
+    <Background>
       <View style={styles.header}>
         <Profile />
         <ButtonAdd />
@@ -73,6 +74,6 @@ export function Home() {
           showsVerticalScrollIndicator={false}
         />
       </View>
-    </View>
+    </Background>
   );
 }
