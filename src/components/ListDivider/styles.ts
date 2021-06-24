@@ -8,6 +8,6 @@ export const styles = StyleSheet.create({
     marginTop: 2, 
     marginVertical: 21,
     height: 1,
-    width: '78%'
+    width: '75%'
   }
 });
