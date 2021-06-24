@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+  import { StyleSheet } from 'react-native';
 import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 8,
     justifyContent: 'space-between',
-    height: 100,
+    height: 116,
     paddingVertical: 20,
     width: 100,
   },
@@ -25,6 +25,7 @@ export const styles = StyleSheet.create({
     color: theme.colors.heading,
     fontFamily: theme.fonts.title700,
     fontSize: 15,
+    marginTop: 15,
   },
 
   check: {
