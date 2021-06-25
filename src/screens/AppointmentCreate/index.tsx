@@ -14,7 +14,7 @@ import { CategorySelect } from '../../components/CategorySelect';
 import { Guilds } from '../Guilds';
 import { GuildIcon } from '../../components/GuildIcon';
 import { Header } from '../../components/Header';
-import { ModalView } from '../../components/Modal';
+import { ModalView } from '../../components/ModalView';
 import { SmallInput } from '../../components/SmallInput';
 import { TextArea } from '../../components/TextArea';
 
