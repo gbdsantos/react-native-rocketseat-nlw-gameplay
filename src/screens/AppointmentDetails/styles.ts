@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
   },
 
   banner: {
-    marginBottom: 30,
     height: 234,
     width: '100%',
   },

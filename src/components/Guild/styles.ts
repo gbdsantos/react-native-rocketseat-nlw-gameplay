@@ -20,13 +20,13 @@ title: {
   color: theme.colors.heading,
   fontFamily: theme.fonts.title700,
   fontSize: 18,
-  marginBottom: 11,
+  marginBottom: 4,
 },
 
 type: {
   color: theme.colors.highlight,
   fontFamily: theme.fonts.text400,
   fontSize: 13,
-  marginBottom: 24,
+  marginBottom: 12,
 },
 })
