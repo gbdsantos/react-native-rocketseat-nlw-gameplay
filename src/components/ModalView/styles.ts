@@ -16,10 +16,8 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: theme.colors.secondary30,
     borderRadius: 2,
-    marginBottom: 103,
     marginTop: 13,
     height: 2,
     width: 39,
-
   }
 });
