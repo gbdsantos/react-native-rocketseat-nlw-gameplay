@@ -31,6 +31,7 @@ export const styles = StyleSheet.create({
     color: theme.colors.heading,
     fontFamily: theme.fonts.text400,
     fontSize: 13,
+    lineHeight: 21,
   },
 
   members: {
