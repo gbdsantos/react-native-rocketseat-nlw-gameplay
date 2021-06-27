@@ -9,13 +9,11 @@ import React,
 import * as AuthSession from 'expo-auth-session';
 import { api } from '../services/api';
 
-import { 
-  CDN_IMAGE, 
-  CLIENT_ID, 
-  REDIRECT_URI, 
-  RESPONSE_TYPE, 
-  SCOPE 
-} from '../configs/';
+const { CDN_IMAGE } = process.env
+const { CLIENT_ID } = process.env
+const { REDIRECT_URI } = process.env
+const { RESPONSE_TYPE } = process.env
+const { SCOPE } = process.env
 
 type User = {
   id: string;
