@@ -3,6 +3,8 @@ import {
   Alert,
   FlatList, 
   ImageBackground, 
+  Platform,
+  Share,
   Text, 
   View } from 'react-native';
 
@@ -54,6 +56,17 @@ export function AppointmentDetails() {
       setLoading(false);
     }
   }
+
+  function handleShareInvitation() {
+    const message = Platform.OS === 'ios' 
+    ? `Junte-se a ${guildSelected.guild.name}`
+    : widget.instant_invite;
+
+    Share.share({
+      message,
+      url: widget.instant_invite
+    });
+  }
   
   useEffect(() => {
     fetchGuildInfo();
@@ -63,7 +76,8 @@ export function AppointmentDetails() {
     <Background>
       <Header 
         action={
-          <BorderlessButton>
+          guildSelected.guild.owner &&
+          <BorderlessButton onPress={handleShareInvitation}>
             <Fontisto 
               color={theme.colors.primary}
               name="share"
