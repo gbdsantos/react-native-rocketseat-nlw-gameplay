@@ -11,6 +11,7 @@ import {
 import { useRoute } from '@react-navigation/native';
 import { Fontisto } from '@expo/vector-icons';
 import { BorderlessButton } from 'react-native-gesture-handler';
+import * as Linking from 'expo-linking';
 
 import { AppointmentProps } from '../../components/Appointment';
 import { Background } from '../../components/Background';
@@ -67,6 +68,10 @@ export function AppointmentDetails() {
       url: widget.instant_invite
     });
   }
+
+  function handleOpenGuild() {
+    Linking.openURL(widget.instant_invite);
+  }
   
   useEffect(() => {
     fetchGuildInfo();
@@ -109,7 +114,7 @@ export function AppointmentDetails() {
         <>
           <ListHeader 
             title="Jogadores"
-            subtitle={`Total ${widget.members.length}`}
+            subtitle={`${guildSelected.guild.owner ? 'Total ' + widget.members.length : ' ' }`}
           />
 
           <FlatList 
@@ -124,9 +129,15 @@ export function AppointmentDetails() {
         </>
       }
 
-      <View style={styles.footer}>
-        <ButtonIcon title="Entrar na partida" />
-      </View>
+      {
+        guildSelected.guild.owner &&
+        <View style={styles.footer}>
+          <ButtonIcon 
+            onPress={handleOpenGuild}     
+          title="Entrar na partida" 
+          />
+        </View>
+      }
     </Background>
   );
 }
